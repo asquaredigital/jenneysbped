@@ -1,0 +1,422 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from htmldemo.net/edubuzz/edubuzz/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Mar 2023 08:16:32 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>About || Jenney’s B.P.ED</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Fontawsome CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Metarial Iconic Font CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+
+    <!-- Plugin CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/plugin.css">
+
+    <!-- Style CSS
+		============================================ -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <style>
+        #contact-form label {
+            color: #fff;
+            font-size: 1.0rem;
+            font-weight: 500;
+        }
+
+        .contact-form-style select {
+            background: #f2f2f2;
+            border: none;
+            height: 46px;
+            padding-left: 15px;
+            width: 100%;
+        }
+
+        #contact-form h4 {
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .blue-bg {
+            background-color: #1F3971 !important;
+        }
+
+        .button-default {
+            background: #f2f2f2 none repeat scroll 0 0 !important;
+            color: #1f3971 !important;
+        }
+
+        .button-default :hover{
+            background: #f2f2f2 none repeat scroll 0 0 !important;
+            color: #ffae27 !important;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!--Loading Area Start-->
+    <div class="loading">
+        <div class="text-center middle">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!--Loading Area End-->
+    <!--Main Wrapper Start-->
+    <div class="as-mainwrapper">
+        <!--Bg White Start-->
+        <div class="bg-white">
+            <!--Header Area Start-->
+            <header>
+                <div id="header">
+
+                </div>
+            </header>
+            <!--End of Header Area-->
+
+            <!--Contact Area Start-->
+            <div class="contact-area pt-25 pb-100">
+                <div class="container">
+                    <div class="row g-0">
+                        <div class="col-md-12 col-lg-12 blue-bg">
+                            <div class="contact-form-wrap">
+                                <h2 class="contact-title text-center" style="color: #fff;">ONLINE APPLICATION</h2>
+                                <form id="contact-form" action="mail.php" method="post">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Applicant Name</label>
+                                                <input name="name" placeholder="Applicant Name" type="text" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Date Of Birth</label>
+                                                <input name="text" placeholder="DD/MM/YYYY" type="date" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Father's Name</label>
+                                                <input name="f_name" placeholder="Father's Name" type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Mother's Name</label>
+                                                <input name="m_name" placeholder="Mother's Name" type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <label for="">Community</label>
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="contact-form-style mb-20">
+                                                        <select name="religion" placeholder="--Select Religion--" id="">
+                                                            <option value="">--Select Religion--</option>
+                                                            <option value="Hindu">Hindu</option>
+                                                            <option value="Christian">Christian</option>
+                                                            <option value="Muslim">Muslim</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <div class="contact-form-style mb-20">
+                                                        <select name="community" placeholder="--Select Religion--"
+                                                            id="">
+                                                            <option value="">--Select Community--</option>
+                                                            <option value="sc">SC</option>
+                                                            <option value="st">ST</option>
+                                                            <option value="scc">SCC</option>
+                                                            <option value="sca">SCA</option>
+                                                            <option value="mbc">MBC</option>
+                                                            <option value="dnc">DNC</option>
+                                                            <option value="bc">BC</option>
+                                                            <option value="fc">FC</option>
+                                                            <option value="oc">OC</option>
+                                                            <option value="others">Others</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <div class="contact-form-style mb-20">
+                                                        <input name="caste" placeholder="Caste" type="text">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Select Degree:</label>
+                                                <select name="degree" id="">
+                                                    <option value="">--Select Degree--</option>
+                                                    <option value="bped">B.P.Ed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-g-12 ">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Educational Qualification:</label>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h4>SSLC</h4>
+                                                        <div class="d-flex">
+                                                            <input name="sslc_obtained" placeholder="Obtained Marks"
+                                                                type="text">
+                                                            <label for="">/</label>
+                                                            <input name="sslc_total" placeholder="Total Marks"
+                                                                type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 clearfix"></div>
+                                                    <div class="col-lg-3">
+                                                        <div class="contact-form-style mb-20">
+                                                            <input name="sslc_passing" placeholder="Year of Passing"
+                                                                type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 ">
+                                            <div class="contact-form-style mb-20">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h4>HSC</h4>
+                                                        <div class="d-flex">
+                                                            <input name="hsc_obtained" placeholder="Obtained Marks"
+                                                                type="text">
+                                                            <label for="">/</label>
+                                                            <input name="hsc_total" placeholder="Total Marks"
+                                                                type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 clearfix"></div>
+                                                    <div class="col-lg-3">
+                                                        <div class="contact-form-style mb-20">
+                                                            <input name="hsc_passing" placeholder="Year of Passing"
+                                                                type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="col-lg-12 ">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Degree:</label>
+                                                <div class="row">
+                                                    <div class="col-lg-6 ">
+                                                        <div class="row">
+                                                            <label for="">
+                                                                <h4>UG:</h4>
+                                                            </label>
+                                                            <div class="col-lg-6">
+                                                                <div class="contact-form-style mb-20">
+                                                                    <input name="ug_major" placeholder=" Major"
+                                                                        type="text">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="contact-form-style mb-20">
+                                                                    <!-- <label for=""  style="color: #1F3971;"> sdd.</label> -->
+                                                                    <input name="ug_obtain" placeholder="Marks Obtain"
+                                                                        type="text">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-lg-3 clearfix"></div>
+                                                    <div class="col-lg-3">
+                                                        <div class="contact-form-style mt-4">
+                                                            <input name="ug_passing" placeholder="Year of Passing"
+                                                                type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 ">
+                                            <div class="contact-form-style mb-20 ">
+                                                <div class="row">
+                                                    <div class="col-lg-6 ">
+                                                        <div class="row">
+                                                            <label for="">
+                                                                <h4>PG:</h4>
+                                                            </label>
+                                                            <div class="col-lg-6">
+                                                                <div class="contact-form-style mb-20">
+                                                                    <input name="pg_major" placeholder=" Major"
+                                                                        type="text">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="contact-form-style mb-20">
+                                                                    <input name="pg_obtain" placeholder="Marks Obtain"
+                                                                        type="text">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 clearfix"></div>
+                                                    <div class="col-lg-3">
+                                                        <div class="contact-form-style mt-4">
+                                                            <input name="pg_passing" placeholder="Year of Passing"
+                                                                type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-12">
+                                            <div class="contact-form-style">
+                                                <label for="">Address:</label>
+                                                <textarea name="message"
+                                                    placeholder="Address for Communication"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Mobile No:</label>
+                                                <input name="phone" placeholder="Contact Mobile Number" type="number"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <label for="">Email:</label>
+                                                <input name="email" placeholder="Contact Mail Id" type="email" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="contact-form-style mb-20">
+                                                <label for=""> High Level Achivement in Sports:</label>
+                                                <select name="community" placeholder="--Select Religion--" id="">
+                                                    <option value="">--Select Sports Achivements--</option>
+                                                    <option value="schoolLevel">School Level</option>
+                                                    <option value="interCollegiate">Inter Collegiate</option>
+                                                    <option value="districtLevel">District Level</option>
+                                                    <option value="zonalLevel">Zonal Level</option>
+                                                    <option value="universityLevel">University Level</option>
+                                                    <option value="stateLevel">State Level</option>
+                                                    <option value="nationalLevel">National Level</option>
+                                                    <option value="internationalLevel">International Level</option>
+                                                    <option value="others">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-form-style text-end">
+                                            <button class="button-default" type="submit"><span>Submit</span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <p class="form-messege"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Contact Area End-->
+
+            <footer>
+
+                <div id="footer"></div>
+            </footer>
+        </div>
+        <!--End of Bg White-->
+    </div>
+    <!--End of Main Wrapper Area-->
+
+
+
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-migrate-3.3.2.min.js"></script>
+
+    <!-- popper JS
+		============================================ -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- AJax Mail JS
+		============================================ -->
+    <script src="js/ajax-mail.js"></script>
+
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+</body>
+
+<!-- Mirrored from htmldemo.net/edubuzz/edubuzz/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Mar 2023 08:16:33 GMT -->
+
+</html>
