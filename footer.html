@@ -43,8 +43,7 @@
                         <div class="footer-logo">
                             <a href="index-2.html"><img src="img/logo/logo-1.png" alt=""></a>
                         </div>
-                        <p>There are many variations of passg of Lorem Ipsum available, but thmajority have
-                            suffered altem, </p>
+                        <p>Our mission is to provide quality education and to focus on holistic development of the student. </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -74,7 +73,7 @@
                         <h3>Useful Links</h3>
                         <ul class="footer-list">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="about-1.html">About</a></li>
                             <li><a href="course.html">B.P.Ed</a></li>
                             <li><a href="application.html">Admission</a></li>
                             <li><a href="faculties.html">Faculties</a></li>
@@ -91,7 +90,7 @@
                             <a href="#"><i class="zmdi zmdi-facebook"></i></a>
                             <a href="#"><i class="zmdi zmdi-rss"></i></a>
                             <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
-                            <a href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                            <a href="#" id="whatsapp"><i class="zmdi zmdi-whatsapp"></i></a>
                             <a href="#"><i class="zmdi zmdi-instagram"></i></a>
                         </div>
                     </div>
@@ -117,3 +116,17 @@
     </div>
     <!--End of Footer Area-->
 </footer>
+
+
+  <!--Footer Ends-->
+
+  <script>
+    $(document).ready(function() {
+       $('#whatsapp').click(function() {
+          var phone = '+91 9786360344'; // Replace with your phone number
+          var message = 'Hello'; // Replace with your message
+          var url = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message);
+          window.open(url);
+       });
+    });
+    </script>
