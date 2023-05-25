@@ -102,6 +102,27 @@
             width: 110px !important;
             height: 126px !important;
         }
+    .news-container {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .news-wrapper {
+      display: flex;
+      animation: marquee 25s linear infinite;
+    }
+
+    .news-item {
+      flex: 0 0 300px;
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
     </style>
 
 </head>
@@ -166,76 +187,31 @@
 
             <!--End of About Area-->
             <!--Latest News Area Start-->
-            <div class="latest-area section-padding bg-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-title-wrapper">
-                                <div class="section-title">
-                                    <h3>Our Latest News</h3>
-                                    <p>There are many variations of passages</p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container">
+                <h1>Latest News</h1>
+                <div class="news-container">
+                  <div class="news-wrapper">
+                    <div class="news-item">
+                      <h3>News 1</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="single-latest-item">
-                                <div class="single-latest-image">
-                                    <!-- <a href="blog-details.html"><img src="img/latest/1.jpg" alt=""></a> -->
-                                </div>
-                                <div class="single-latest-text">
-                                    <h3><a href="blog-details.html">Admissions 2023-2024</a></h3>
-                                    <div class="single-item-comment-view">
-                                        <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                                        <span><i class="zmdi zmdi-eye"></i>59</span>
-                                        <span><i class="zmdi zmdi-comments"></i>19</span>
-                                    </div>
-                                    <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected
-                                        humour, </p>
-                                    <a href="blog-details.html" class="button-default">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="single-latest-item">
-                                <div class="single-latest-image">
-                                    <!-- <a href="blog-details.html"><img src="img/latest/2.jpg" alt=""></a> -->
-                                </div>
-                                <div class="single-latest-text">
-                                    <h3><a href="blog-details.html">Exam Circular</a></h3>
-                                    <div class="single-item-comment-view">
-                                        <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                                        <span><i class="zmdi zmdi-eye"></i>59</span>
-                                        <span><i class="zmdi zmdi-comments"></i>19</span>
-                                    </div>
-                                    <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected
-                                        humour, </p>
-                                    <a href="blog-details.html" class="button-default">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="single-latest-item">
-                                <div class="single-latest-image">
-                                    <!-- <a href="blog-details.html"><img src="img/latest/3.jpg" alt=""></a> -->
-                                </div>
-                                <div class="single-latest-text">
-                                    <h3><a href="blog-details.html">General Circular</a></h3>
-                                    <div class="single-item-comment-view">
-                                        <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
-                                        <span><i class="zmdi zmdi-eye"></i>59</span>
-                                        <span><i class="zmdi zmdi-comments"></i>19</span>
-                                    </div>
-                                    <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected
-                                        humour, </p>
-                                    <a href="blog-details.html" class="button-default">Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="news-item">
+                      <h3>News 2</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
                     </div>
+                    <div class="news-item">
+                      <h3>News 3</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
+            
+              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/js/bootstrap.bundle.min.js"></script>
             <!--End of Latest News Area-->
             <!--About Area Start-->
             <div class="about-area mt-95">
@@ -452,7 +428,6 @@
                             <div class="section-title-wrapper">
                                 <div class="section-title">
                                     <h3>OUR EVENTS</h3>
-                                    <p>There are many variations of passages</p>
                                 </div>
                             </div>
                         </div>
