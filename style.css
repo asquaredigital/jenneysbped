@@ -260,7 +260,7 @@ mark {
 }
 .button-default:hover {
 	background-color: #FFAE27;
-	color: #FFAE27;
+	color: #fff;
 }
 .btn-group {
 	margin-left: 5px;
