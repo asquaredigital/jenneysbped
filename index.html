@@ -38,6 +38,8 @@
 
 
     <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="owlcarousel/owl.theme.default.min.css">
 
     <script>
         $(function () {
@@ -172,6 +174,107 @@
         #myCarousel    .carousel-item.prev::after {
             transform: rotateY(-90deg);
         }
+
+        .slider {
+      position: relative;
+      width: 100%;
+      height: 5Z00px;
+      overflow: hidden;
+    }
+  
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+  
+    .slide img {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .slide-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+    
+    .slide-content h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .slide-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    
+    .slider-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4337a9;
+      color: #000;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+    .testimonial-slide {
+    margin: 0 20px;
+  }
+
+  .testimonial-slide img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .author-desc {
+    margin-bottom: 20px;
+  }
+
+  .testimonial-author {
+    font-weight: bold;
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 40px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .owl-prev {
+    left: 20px;
+  }
+
+  .owl-next {
+    right: 20px;
+  }
+
     </style>
 
 </head>
@@ -202,37 +305,58 @@
             </header>
             <!--End of Header Area-->
             <!--Slider Area Start-->
-            <div class="slider-area">
-                <div class="hero-slider owl-carousel">
-                    <!--Single Slider Start-->
-                    <div class="single-slider" style="background-image: url(img/slider/5.jpg)">
-                        <div class="hero-slider-content">
-                            <h1>Jenneys College of
-                                Physical Education</h1>
-                            <p>APPROVED BY NCTE, BANGALORE<br>
-                                AFFILIATED TO TAMIL NADU PHYSICAL EDUCATION & SPORTS UNIVERSITY(TNPESU), CHENNAI</p>
-                            <div class="slider-btn">
-                                <a class="button-default" href="about-1.html">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Single Slider End-->
-                    <!--Single Slider Start-->
-                    <div class="single-slider" style="background-image: url(img/slider/1.jpg)">
-                        <div class="hero-slider-content">
-                            <h1>Jenneys College of
-                                Physical Education</h1>
-                            <p>APPROVED BY NCTE, BANGALORE<br>
-                                AFFILIATED TO TAMIL NADU PHYSICAL EDUCATION & SPORTS UNIVERSITY(TNPESU), CHENNAI</p>
-                            <div class="slider-btn">
-                                <a class="button-default" href="about-1.html">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Single Slider End-->
+            <div class="slider">
+                <div class="slide">
+                  <img style="" src="img/slider/2.jpg" alt="Slide 1">
+                  <div class="slide-content">
+                    <h1 style="color: #fff;font-weight: bold;">JENNEYS COLLEGE OF PHYSICAL EDUCATION</h1>
+                    <p>APPROVED BY NCTE, BANGALORE<br>
+                      AFFILIATED TO TAMIL NADU PHYSICAL EDUCATION & SPORTS UNIVERSITY(TNPESU), CHENNAI</p>
+                    <a href="#" class="slider-btn">Read More</a>
+                  </div>
                 </div>
-            </div>
+                <div class="slide">
+                  <img src="img/slider/4.jpg" alt="Slide 2">
+                  <div class="slide-content">
+                    <h1 style="color: #fff;font-weight: bold;">JENNEYS COLLEGE OF PHYSICAL EDUCATION</h1>
+                    <p>APPROVED BY NCTE, BANGALORE<br>
+                      AFFILIATED TO TAMIL NADU PHYSICAL EDUCATION & SPORTS UNIVERSITY(TNPESU), CHENNAI</p>
+                    <a href="#" class="slider-btn">Read More</a>
+                  </div>
+                </div>
+                <div class="slide">
+                  <img src="img/slider/1.jpg" alt="Slide 3">
+                  <div class="slide-content">
+                    <h1 style="color: #fff;font-weight: bold;">JENNEYS COLLEGE OF PHYSICAL EDUCATION</h1>
+                    <p>APPROVED BY NCTE, BANGALORE<br>
+                      AFFILIATED TO TAMIL NADU PHYSICAL EDUCATION & SPORTS UNIVERSITY(TNPESU), CHENNAI</p>
+                    <a href="#" class="slider-btn">Read More</a>
+                  </div>
+                </div>
+              </div>
+
             <!--Slider Area End-->
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  var slides = document.querySelectorAll(".slide");
+                  var currentSlide = 0;
+                
+                  function showSlide(n) {
+                    slides[currentSlide].style.display = "none";
+                    currentSlide = (n + slides.length) % slides.length;
+                    slides[currentSlide].style.display = "block";
+                  }
+                
+                  function nextSlide() {
+                    showSlide(currentSlide + 1);
+                  }
+                
+                  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+                
+                  showSlide(currentSlide); // Show initial slide
+                });
+              </script>
 
             <!--End of About Area-->
             <!--Latest News Area Start-->
@@ -440,88 +564,46 @@
             <!--End of Online Product Area-->
             <div class="testimonial-area1">
                 <div class="container">
-                    <div class="row">
-                        <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
-
-
-                            <div class="carousel-inner row text-center">
-                                <div class="carousel-item  active">
-                                    <div class="single-testimonial-area">
-                                        <div class="testimonial-image">
-                                            <img src="img/testimonial/TESTIMONALS Photo/veerasan.jpg" alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="author-desc">I am very much thankful to Jenneys College of
-                                                Physical Education for providing me
-                                                the opportunity to get skilful knowledge and to get a job.
-                                                They have helped me to learn the skills that are needed in the current
-                                                world.
-                                                The latest rules and regulation changes in the sports arena are learned
-                                                with the guidance and support from our faculty.
-                                                The multiple programmes were organized for the welfare of the students.
-                                                I am grateful to thank each and every one of the personalities of our
-                                                college.</p>
-                                            <p class="testimonial-author">VEERASAN S</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item  ">
-                                    <div class="single-testimonial-area">
-                                        <div class="testimonial-image">
-                                            <img src="img/testimonial/TESTIMONALS Photo/JEEVANANTHAN K M.jpeg" alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="author-desc">
-                                                It’s my pleasure to thank our Jenneys College of Physical Education made
-                                                me to strengthen my career.
-                                                We have learned abbreviation of sport activated and to put forth in the
-                                                academic part to develop myself
-                                                in shaping as teachers in professional. I thank the almighty god who
-                                                gave me a wonderful position</p>
-                                            <p class="testimonial-author">JEEVANANTHAN K M</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item  ">
-                                    <div class="single-testimonial-area">
-                                        <div class="testimonial-image">
-                                            <img src="img/testimonial/TESTIMONALS Photo/B. HEMA MALINI.jpeg" alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="author-desc">
-                                                My B.P.Ed Journey at Jenneys College of physical education between
-                                                facilities and
-                                                students is very cordial. Now I am working in a CBSE School as a
-                                                Physical Education Teacher.
-                                                The overall College experience is very good and Unforgettable Camping.
-                                                I would like to thank my Principal Dr.Arulmozhi Saravanan mam for
-                                                encouraging us.
-                                                This College gave me sweet memories, faithful friends and a sense of
-                                                confidence to face
-                                                the challenges and turbulence in life.
-                                                Thanks to Jenneys College. </p>
-                                            <p class="testimonial-author">B. HEMA MALINI</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a class="carousel-control-prev" href="#carouselExampleControls1" role="button"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <!-- <span class="sr-only">Previous</span> -->
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls1" role="button"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <!-- <span class="sr-only">Next</span> -->
-                            </a>
-
-
+                  <div class="row">
+                    <div class="testimonial-carousel owl-carousel owl-theme">
+                      <div class="testimonial-slide">
+                        <div class="single-testimonial-area">
+                          <div class="testimonial-image">
+                            <img src="img/testimonial/TESTIMONALS Photo/veerasan.jpg" alt="">
+                          </div>
+                          <div class="testimonial-content">
+                            <p class="author-desc">I am very much thankful to Jenneys College of Physical Education for providing me the opportunity to get skillful knowledge and to get a job. They have helped me to learn the skills that are needed in the current world. The latest rules and regulation changes in the sports arena are learned with the guidance and support from our faculty. The multiple programs were organized for the welfare of the students. I am grateful to thank each and every one of the personalities of our college.</p>
+                            <p class="testimonial-author">VEERASAN S</p>
+                          </div>
                         </div>
+                      </div>
+                      <div class="testimonial-slide">
+                        <div class="single-testimonial-area">
+                          <div class="testimonial-image">
+                            <img src="img/testimonial/TESTIMONALS Photo/JEEVANANTHAN K M.jpeg" alt="">
+                          </div>
+                          <div class="testimonial-content">
+                            <p class="author-desc">It’s my pleasure to thank our Jenneys College of Physical Education made me strengthen my career. We have learned the abbreviation of sport activated and to put forth in the academic part to develop myself in shaping as teachers in professional. I thank the almighty god who gave me a wonderful position</p>
+                            <p class="testimonial-author">JEEVANANTHAN K M</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-slide">
+                        <div class="single-testimonial-area">
+                          <div class="testimonial-image">
+                            <img src="img/testimonial/TESTIMONALS Photo/B. HEMA MALINI.jpeg" alt="">
+                          </div>
+                          <div class="testimonial-content">
+                            <p class="author-desc">My B.P.Ed Journey at Jenneys College of Physical Education between facilities and students is very cordial. Now I am working in a CBSE School as a Physical Education Teacher. The overall College experience is very good and Unforgettable Camping. I would like to thank my Principal Dr. Arulmozhi Saravanan mam for encouraging us. This College gave me sweet memories, faithful friends, and a sense of confidence to face the challenges and turbulence in life. Thanks to Jenneys College.</p>
+                            <p class="testimonial-author">B. HEMA MALINI</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
+              </div>
+            
             <!--Testimonial Area End-->
             <!--Event Area Start-->
             <div class="event-area section-padding bg-white">
@@ -616,7 +698,21 @@
 
 
     <!--Footer Ends-->
-
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.testimonial-carousel').owlCarousel({
+          items: 1,
+          loop: true,
+          nav: true,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 6000,
+          autoplayHoverPause: true,
+          navText: ['<span class="prev-arrow">&lt;</span>', '<span class="next-arrow">&gt;</span>']
+        });
+      });
+    </script>
     <script>
         const myCarouselElement = document.querySelector('#myCarousel')
         const carousel = new bootstrap.Carousel(myCarouselElement, {
@@ -628,7 +724,6 @@
     <!-- jquery
 		============================================ -->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="js/vendor/jquery-3.6.0.min.js"></script>
     <script src="js/vendor/jquery-migrate-3.3.2.min.js"></script>
 
     <!-- popper JS
