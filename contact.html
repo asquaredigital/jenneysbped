@@ -123,34 +123,36 @@
                         <div class="col-md-12 col-lg-6 yellow-bg">
                             <div class="contact-form-wrap">
                                 <h2 class="contact-title">SEND YOUR MESSAGE</h2>
-                                <form id="contact-form" action="mail.php" method="post">
+                                    <form id="contact-form" method="post" class="contact-form">
+
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="contact-form-style mb-20">
-                                                <input name="name" placeholder="Name*" type="text">
+                                                <input type="text" id="name" name="name" placeholder="Name*" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="contact-form-style mb-20">
-                                                <input name="phone" placeholder="Phone*" type="text">
+                                                <input name="contact" id="contact" placeholder="Phone*" type="text" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="contact-form-style mb-20">
-                                                <input name="email" placeholder="Email*" type="email">
+                                                <input name="email" id="email" placeholder="Email*" type="email" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="contact-form-style">
-                                                <textarea name="message"
+                                                <textarea name="message" id="message"
                                                     placeholder="Type your message here.."></textarea>
                                                 <button class="button-default" type="submit"><span>Send
                                                         Email</span></button>
                                             </div>
+                                            <div style="text-align: center; color:white" id="response-message"></div>
+
                                         </div>
                                     </div>
                                 </form>
-                                <p class="form-messege"></p>
                             </div>
                         </div>
                     </div>
@@ -168,7 +170,6 @@
         <!--End of Bg White-->
     </div>
     <!--End of Main Wrapper Area-->
-
 
 
     <!-- jquery
@@ -196,6 +197,41 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
+
+    
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').submit(function(event) {
+                event.preventDefault(); // Prevent form submission
+        
+                // Get form data
+                var formData = {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    contact: $('#contact').val(),
+                    message: $('#message').val()
+                };
+        
+                // Send AJAX request
+                $.ajax({
+                    type: 'POST',
+                    url: 'contact2.php',
+                    data: formData,
+                    dataType: 'json',
+                    encode: true
+                })
+                .done(function(response) {
+                    // Display response message
+                    $('#response-message').text(response.message);
+                })
+                .fail(function(response) {
+                    // Display error message
+                    $('#response-message').text('Error occurred while processing the request.');
+                });
+            });
+        });
+        
+            </script>
 </body>
 
 </html>

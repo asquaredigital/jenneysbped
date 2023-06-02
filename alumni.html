@@ -169,7 +169,7 @@
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for=""> Name</label>
-                                                <input name="name" placeholder=" Name" type="text" required>
+                                                <input name="name" id="name" placeholder="Name*" type="text" required>
                                             </div>
                                         </div>
                                     
@@ -177,29 +177,29 @@
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Father's Name</label>
-                                                <input name="f_name" placeholder="Father's Name" type="text">
+                                                <input name="f_name" id="f_name" placeholder="Father's Name*" type="text">
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Email:</label>
-                                                <input name="email" placeholder="Contact Mail Id" type="email" required>
+                                                <input name="email" id="email" placeholder="Contact Mail Id*" type="email" required>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Mobile No:</label>
-                                                <input name="phone" placeholder="Contact Mobile Number" type="number"
+                                                <input name="phone" id="phone" placeholder="Contact Mobile Number*" type="number"
                                                     required>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
-                                                <label for="">Year of Passing:</label>
-                                                <select name="year" id="">
+                                                <label for="">Year of Passing*:</label>
+                                                <select name="year" id="year" required>
                                                     <option value="">--Select Year--</option>
                                                     <option value="2018">2018</option>
                                                     <option value="2019">2019</option>
@@ -214,14 +214,14 @@
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Current Position</label>
-                                                <input name="position" placeholder="Current Position" type="text">
+                                                <input name="position" id="position" placeholder="Current Position" type="text">
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
                                             <div class="contact-form-style">
                                                 <label for="">Address:</label>
-                                                <textarea name="message"
+                                                <textarea name="address" id="address"
                                                     placeholder="Address for Communication"></textarea>
                                             </div>
                                         </div>
@@ -230,9 +230,10 @@
                                         <div class="contact-form-style text-end">
                                             <button class="button-default" type="submit"><span>Submit</span></button>
                                         </div>
+                                        <div style="text-align: center; color:white" id="response-message"></div>
+
                                     </div>
                                 </form>
-                                <p class="form-messege"></p>
                             </div>
                         </div>
                     </div>
@@ -276,6 +277,42 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').submit(function(event) {
+                event.preventDefault(); // Prevent form submission
+        
+                // Get form data
+                var formData = {
+                    name: $('#name').val(),
+                    f_name: $('#f_name').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    year: $('#year').val(),
+                    address: $('#address').val(),
+
+                };
+        
+                // Send AJAX request
+                $.ajax({
+                    type: 'POST',
+                    url: 'alumni.php',
+                    data: formData,
+                    dataType: 'json',
+                    encode: true
+                })
+                .done(function(response) {
+                    // Display response message
+                    $('#response-message').text(response.message);
+                })
+                .fail(function(response) {
+                    // Display error message
+                    $('#response-message').text('Error occurred while processing the request.');
+                });
+            });
+        });
+        
+            </script>
 </body>
 
 <!-- Mirrored from htmldemo.net/edubuzz/edubuzz/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Mar 2023 08:16:33 GMT -->

@@ -144,33 +144,36 @@
                     <div class="row g-0">
                         <div class="col-md-12 col-lg-12 blue-bg">
                             <div class="contact-form-wrap">
+                               <p style="text-align: right;"><a href="academic.html" class="button-default">View Course</a></p> 
+
                                 <h2 class="contact-title text-center" style="color: #fff;">ONLINE APPLICATION</h2>
-                                <form id="contact-form" action="mail.php" method="post">
+
+                                <form id="contact-form" method="post" class="contact-form">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Applicant Name</label>
-                                                <input name="name" placeholder="Applicant Name" type="text" required>
+                                                <input name="name" id="name" placeholder="Applicant Name*" type="text" required>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Date Of Birth</label>
-                                                <input name="text" placeholder="DD/MM/YYYY" type="date" required>
+                                                <input name="dob" id="dob" placeholder="DD/MM/YYYY*" type="date" required>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Father's Name</label>
-                                                <input name="f_name" placeholder="Father's Name" type="text">
+                                                <input name="f_name" id="f_name" placeholder="Father's Name*" type="text" required>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Mother's Name</label>
-                                                <input name="m_name" placeholder="Mother's Name" type="text">
+                                                <input name="m_name" id="m_name"  placeholder="Mother's Name*" type="text" required>
                                             </div>
                                         </div>
 
@@ -179,7 +182,7 @@
                                             <div class="row">
                                                 <div class="col-lg-4">
                                                     <div class="contact-form-style mb-20">
-                                                        <select name="religion" placeholder="--Select Religion--" id="">
+                                                        <select name="religion" id="religion" placeholder="--Select Religion--" id="">
                                                             <option value="">--Select Religion--</option>
                                                             <option value="Hindu">Hindu</option>
                                                             <option value="Christian">Christian</option>
@@ -190,7 +193,7 @@
 
                                                 <div class="col-lg-4">
                                                     <div class="contact-form-style mb-20">
-                                                        <select name="community" placeholder="--Select Religion--"
+                                                        <select name="community" id="community" placeholder="--Select Community--"
                                                             id="">
                                                             <option value="">--Select Community--</option>
                                                             <option value="sc">SC</option>
@@ -209,7 +212,7 @@
 
                                                 <div class="col-lg-4">
                                                     <div class="contact-form-style mb-20">
-                                                        <input name="caste" placeholder="Caste" type="text">
+                                                        <input name="caste" id="caste" placeholder="Caste" type="text">
                                                     </div>
 
                                                 </div>
@@ -218,8 +221,8 @@
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
-                                                <label for="">Select Degree:</label>
-                                                <select name="degree" id="">
+                                                <label for="">Select Degree*:</label>
+                                                <select name="degree" id="degree" required>
                                                     <option value="">--Select Degree--</option>
                                                     <option value="bped">B.P.Ed</option>
                                                 </select>
@@ -233,18 +236,18 @@
                                                     <div class="col-lg-6">
                                                         <h4>SSLC</h4>
                                                         <div class="d-flex edu">
-                                                            <input name="sslc_obtained" placeholder="Obtained Marks"
-                                                                type="text">
+                                                            <input name="sslc_obtained" id="sslc_obtained" placeholder="Obtained Marks*"
+                                                                type="text" required>
                                                             <label for="">/</label>
-                                                            <input name="sslc_total" placeholder="Total Marks"
-                                                                type="text">
+                                                            <input name="sslc_total" id="sslc_total" placeholder="Total Marks*"
+                                                                type="text" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-3 clearfix"></div>
                                                     <div class="col-lg-3">
                                                         <div class="contact-form-style mb-20">
-                                                            <input name="sslc_passing" placeholder="Year of Passing"
-                                                                type="text">
+                                                            <input name="sslc_passing" id="sslc_passing" placeholder="Year of Passing*"
+                                                                type="text" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -257,18 +260,18 @@
                                                     <div class="col-lg-6">
                                                         <h4>HSC</h4>
                                                         <div class="d-flex edu">
-                                                            <input name="hsc_obtained" placeholder="Obtained Marks"
-                                                                type="text">
+                                                            <input name="hsc_obtained" id="hsc_obtained" placeholder="Obtained Marks*"
+                                                                type="text" required>
                                                             <label for="">/</label>
-                                                            <input name="hsc_total" placeholder="Total Marks"
-                                                                type="text">
+                                                            <input name="hsc_total" id="hsc_total" placeholder="Total Marks*"
+                                                                type="text" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-3 clearfix"></div>
                                                     <div class="col-lg-3">
                                                         <div class="contact-form-style mb-20">
-                                                            <input name="hsc_passing" placeholder="Year of Passing"
-                                                                type="text">
+                                                            <input name="hsc_passing" id="hsc_passing" placeholder="Year of Passing*"
+                                                                type="text" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -288,15 +291,15 @@
                                                             </label>
                                                             <div class="col-lg-6">
                                                                 <div class="contact-form-style mb-20">
-                                                                    <input name="ug_major" placeholder=" Major"
-                                                                        type="text">
+                                                                    <input name="ug_major" id="ug_major" placeholder=" Ug Major*"
+                                                                        type="text" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div class="contact-form-style mb-20">
                                                                     <!-- <label for=""  style="color: #1F3971;"> sdd.</label> -->
-                                                                    <input name="ug_obtain" placeholder="Marks Obtain"
-                                                                        type="text">
+                                                                    <input name="ug_obtain" id="ug_obtain" placeholder="Marks Obtain*"
+                                                                        type="text" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -305,8 +308,8 @@
                                                     <div class="col-lg-3 clearfix"></div>
                                                     <div class="col-lg-3">
                                                         <div class="contact-form-style mt-4">
-                                                            <input name="ug_passing" placeholder="Year of Passing"
-                                                                type="text">
+                                                            <input name="ug_passing" id="ug_passing" placeholder="Year of Passing*"
+                                                                type="text" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -323,13 +326,13 @@
                                                             </label>
                                                             <div class="col-lg-6">
                                                                 <div class="contact-form-style mb-20">
-                                                                    <input name="pg_major" placeholder=" Major"
+                                                                    <input name="pg_major" id="pg_major" placeholder=" Major"
                                                                         type="text">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div class="contact-form-style mb-20">
-                                                                    <input name="pg_obtain" placeholder="Marks Obtain"
+                                                                    <input name="pg_obtain" id="pg_obtain" placeholder="Marks Obtain"
                                                                         type="text">
                                                                 </div>
                                                             </div>
@@ -338,7 +341,7 @@
                                                     <div class="col-lg-3 clearfix"></div>
                                                     <div class="col-lg-3">
                                                         <div class="contact-form-style mt-4">
-                                                            <input name="pg_passing" placeholder="Year of Passing"
+                                                            <input name="pg_passing" id="pg_passing" placeholder="Year of Passing"
                                                                 type="text">
                                                         </div>
                                                     </div>
@@ -350,29 +353,29 @@
                                         <div class="col-md-12">
                                             <div class="contact-form-style">
                                                 <label for="">Address:</label>
-                                                <textarea name="message"
-                                                    placeholder="Address for Communication"></textarea>
+                                                <textarea name="address" id="address"
+                                                    placeholder="Address for Communication*" required></textarea>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Mobile No:</label>
-                                                <input name="phone" placeholder="Contact Mobile Number" type="number"
+                                                <input name="phone" id="phone" placeholder="Contact Mobile Number*" type="number"
                                                     required>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for="">Email:</label>
-                                                <input name="email" placeholder="Contact Mail Id" type="email" required>
+                                                <input name="email" id="email" placeholder="Contact Mail Id*" type="email" required>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
                                                 <label for=""> High Level Achivement in Sports:</label>
-                                                <select name="community" placeholder="--Select Religion--" id="">
+                                                <select name="community" id="community" placeholder="--Select Religion--" id="">
                                                     <option value="">--Select Sports Achivements--</option>
                                                     <option value="schoolLevel">School Level</option>
                                                     <option value="interCollegiate">Inter Collegiate</option>
@@ -390,9 +393,10 @@
                                         <div class="contact-form-style text-end">
                                             <button class="button-default" type="submit"><span>Submit</span></button>
                                         </div>
+                                        <div style="text-align: center; color:white" id="response-message"></div>
+
                                     </div>
                                 </form>
-                                <p class="form-messege"></p>
                             </div>
                         </div>
                     </div>
@@ -436,6 +440,58 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').submit(function(event) {
+                event.preventDefault(); // Prevent form submission
+        
+                // Get form data
+                var formData = {
+                    name: $('#name').val(),
+                    dob: $('#dob').val(),
+                    f_name: $('#f_name').val(),
+                    m_name: $('#m_name').val(),
+					religion: $('#religion').val(),
+					community: $('#community').val(),
+					caste: $('#caste').val(),
+					degree: $('#degree').val(),
+					sslc_total: $('#sslc_total').val(),
+					sslc_passing: $('#sslc_passing').val(),
+					hsc_obtained: $('#hsc_obtained').val(),
+					hsc_total: $('#hsc_total').val(),
+					hsc_passing: $('#hsc_passing').val(),
+					ug_major: $('#ug_major').val(),
+					ug_obtain: $('#ug_obtain').val(),
+					ug_passing: $('#ug_passing').val(),
+					pg_major: $('#pg_major').val(),
+					pg_obtain: $('#pg_obtain').val(),
+					pg_passing: $('#pg_passing').val(),
+					address: $('#address').val(),
+					phone: $('#phone').val(),
+					email: $('#email').val(),
+					community: $('#community').val()
+			   };
+        
+                // Send AJAX request
+                $.ajax({
+                    type: 'POST',
+                    url: 'apply.php',
+                    data: formData,
+                    dataType: 'json',
+                    encode: true
+                })
+                .done(function(response) {
+                    // Display response message
+                    $('#response-message').text(response.message);
+                })
+                .fail(function(response) {
+                    // Display error message
+                    $('#response-message').text('Error occurred while processing the request.');
+                });
+            });
+        });
+        
+            </script>
 </body>
 
 <!-- Mirrored from htmldemo.net/edubuzz/edubuzz/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Mar 2023 08:16:33 GMT -->
