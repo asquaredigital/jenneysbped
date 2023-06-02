@@ -23,7 +23,7 @@ $message = "Name: $u_name\nEmail: $u_email\nPhone Number: $p_number\nMessage: $m
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-if (mail('elavarasan5193@gmail.com', $subject, $message, $headers)) {
+if (mail('infojenneysbped@gmail.com', $subject, $message, $headers)) {
     // Email sent successfully
     $response = array('message' => 'Email sent successfully!');
     echo json_encode($response);
