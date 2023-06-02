@@ -29,7 +29,7 @@ $pg_passing = $_POST['pg_passing'];
 $address = $_POST['address'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
-$community = $_POST['community'];
+$achievement = $_POST['achievement'];
 
 
 
@@ -38,9 +38,9 @@ $headers = "From: www.jenneysphysicaleducation.com" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content
-$subject = 'New Application Form the Website';
+$subject = 'New Application Form the Website from '.$name;
 $message = 
-"Name: $u_name\n
+"Name: $name\n
 Dob: $dob\n
 Father name: $f_name\n
 Mother name: $m_name\n
@@ -61,7 +61,7 @@ PG_passing : $pg_passing \n
 Address : $address \n
 Phone : $phone \n
 Email : $email \n
-Community : $community \n
+achievement : $achievement\n
 ";
 
 

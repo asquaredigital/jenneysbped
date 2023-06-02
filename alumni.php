@@ -13,6 +13,8 @@ $f_name = $_POST['f_name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $year = $_POST['year'];
+$position = $_POST['position'];
+
 $address = $_POST['address'];
 
 
@@ -23,8 +25,8 @@ $headers = "From: www.jenneysphysicaleducation.com" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content
-$subject = 'Enquiry Form the Website';
-$message = "Name: $name\nFather Name: $f_name\nEmail: $u_email\nPhone Number: $phone\nYear Passed Out: $year\nAddress: $address";
+$subject = 'Alumni Enquiry Form the Website';
+$message = "Name: $name\nFather Name: $f_name\nEmail: $email\nPhone Number: $phone\nYear Passed Out: $year\nPosition: $position\nAddress: $address";
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 

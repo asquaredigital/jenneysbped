@@ -19,7 +19,7 @@ $headers = "From: www.jenneysphysicaleducation.com" . "\r\n" .
 
 // Set up email content
 $subject = 'Enquiry Form the Website';
-$message = "Name: $u_name\nEmail: $u_email\nPhone Number: $p_number\nCompany Name: $c_name\nMessage: $msg";
+$message = "Name: $u_name\nEmail: $u_email\nPhone Number: $p_number\nMessage: $msg";
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
