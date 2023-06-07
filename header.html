@@ -44,45 +44,93 @@
         }
     }
 </style>
+<style>
+ .webtop {
+  display: none; /* Hide webtop by default */
+}
+
+.mobiletop {
+  display: none; /* Hide mobiletop by default */
+}
+#logoid
+{
+    width:320px;height: 80px;margin-left: 20px;
+}
+
+/* Styles for desktop view */
+@media (min-width: 992px) {
+  .webtop {
+    display: flex; /* Show webtop in desktop view */
+  }
+}
+
+/* Styles for mobile view */
+@media (max-width: 991px) {
+  .mobiletop {
+    display: flex; /* Show mobiletop in mobile view */
+  }
+  #logoid
+    {
+        width:320px;height: 80px;margin-left: 1px;
+    }
+}
+.dropdown-symbol {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.dropdown-symbol::before {
+  content: '\02C3'; /* Unicode for a downward-pointing triangle */
+}
+
+    
+    
+
+</style>
 
 <header>
     <div class="header-top">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-3 col-sm-6 col-12">
-                    <span>Have any questions? + 91 99407 11171</span>
+            <div class="row webtop">
+              <div class="col-lg-4 col-md-3 col-sm-6 col-12">
+                <span>Have any questions? +91 99407 11171</span>
+              </div>
+              <div class="col-lg-8 col-md-9 col-sm-6 col-12">
+                <div class="header-top-right">
+                  <span>Phone: +91 94434 70272</span>
+                  <span>Email: jenneysbped@yahoo.com</span>
+                  <span class="px-2">
+                    <a href="application.html">
+                      <button class="btn btn-light btn-sm" type="submit">Apply Now</button>
+                    </a>
+                  </span>
                 </div>
-                <div class="col-lg-8 col-md-9  col-sm-6 col-12">
-                    <div class="header-top-right">
-                        <span>Phone: +91 94434 70272</span>
-                        <span>Email: jenneysbped@yahoo.com</span>
-                        <span class="px-2">
-                            <a href="application.html">
-                                <button class="btn btn-light btn-sm" type="submit">Apply Now</button>
-                            </a>
-                        </span>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
+            <div class="row mobiletop justify-content-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                  <p style="margin-bottom: 20px;">Have any questions? +91 99407 11171<br>
+                   Phone: +91 94434 70272<br>
+                    Email: jenneysbped@yahoo.com</p>
+                  <a href="application.html" >
+                    <button class="btn btn-light btn-sm" style="margin-top: -20px;" type="submit">Apply Now</button>
+                  </a>
+                </div>
+              </div>
+          </div>
+          
     </div>
     <div class="header-logo-menu sticker">
         <div class="mx-2">
             <div class="row">
-                <div class="col-lg-1 col-md-2 col-sm-2 col-12">
+                <div class="col-lg-4 col-md-2 col-sm-2 col-12">
                     <div class="logo">
-                        <a href="index.html"><img src="img/logo/logo-1.png" style="width:80px;height: 80px; margin-left: 20px;"
-                                alt="EDUCAT"></a>
+                        <a href="index.html"><img src="img/logo/logonew.png" id="logoid">
+                               </a>
                     </div>
                 </div>
-                <div class="col-lg-5  col-md-4 col-sm-10 col-12 d-flex align-items-center">
-                    <p class="mt-2">
-                        <strong>Jenneys College of Physical Education</strong> <br>
-                        APPROVED BY NCTE, BANGALORE <br>
-                        AFFILIATED TO TAMIL NADU PHYSICAL EDUCATION & SPORTS UNIVERSITY(TNPESU), CHENNAI
-                    </p>
-                </div>
-                <div class="col-lg-6 col-sm-6 col-12">
+               
+                <div class="col-lg-8 col-sm-6 col-12" style="margin-left: -20px;">
                     <div class="mainmenu-area pull-right">
                         <div class="mainmenu d-none d-lg-block">
                             <nav>
@@ -93,7 +141,8 @@
                                     <li><a href="about-1.html">About</a></li>
 
                                     </li>
-                                    <li><a href="academic.html">Academics</a>
+                                    <li><a href="academic.html">Academics  <span class="dropdown-symbol"></span>
+                                    </a>
 
                                         <ul class="sub-menu">
                                             <!-- <li><a href="">Admissions</a></li> -->
@@ -106,15 +155,7 @@
 
                                         </ul>
 
-                                        <!-- <ul class="sub-menu">
-                                            <li><a href="gallery-four-column.html#aca">B.P.Ed</a></li>
-                                            <li><a href="gallery-four-column.html#aca0">Admission</a></li>
-                                            <li><a href="gallery-four-column.html#aca2">Eligibility</a></li>
-                                            <li><a href="gallery-four-column.html#aca3">Faculties</a></li>
-                                            <li><a href="gallery-four-column.html#aca4">Scholarship</a></li>
-                                            <li><a href="gallery-four-column.html#aca5">Alumni</a></li>
-
-                                        </ul> -->
+                                     
 
                                     </li>
                                     <li><a href="faculties.html">Faculties</a>
@@ -128,29 +169,11 @@
                                     <li><a href="event.html">Events</a>
 
                                     </li>
-                                    <li><a href="alumni.html">Alumni</a>
-
-                                    </li>
+                                   
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
-                        </div>
-                        <ul class="header-search">
-                            <li class="search-menu">
-                                <i id="toggle-search" class="zmdi zmdi-search"></i>
-                            </li>
-                        </ul>
-                        <!--Search Form-->
-                        <div class="search">
-                            <div class="search-form">
-                                <form id="search-form" action="#">
-                                    <input type="search" placeholder="Search here..." name="search" />
-                                    <button type="submit">
-                                        <span><i class="fa fa-search"></i></span>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
+                       
                         <!--End of Search Form-->
                     </div>
                 </div>
@@ -171,7 +194,6 @@
                                 <li><a href="about-1.html">About</a></li>
 
                                 </li>
-
                                 <li><a href="academic.html">Academics</a>
 
                                     <ul class="sub-menu">
@@ -185,25 +207,29 @@
 
                                     </ul>
 
+                                    <!-- <ul class="sub-menu">
+                                        <li><a href="gallery-four-column.html#aca">B.P.Ed</a></li>
+                                        <li><a href="gallery-four-column.html#aca0">Admission</a></li>
+                                        <li><a href="gallery-four-column.html#aca2">Eligibility</a></li>
+                                        <li><a href="gallery-four-column.html#aca3">Faculties</a></li>
+                                        <li><a href="gallery-four-column.html#aca4">Scholarship</a></li>
+                                        <li><a href="gallery-four-column.html#aca5">Alumni</a></li>
+3
+                                    </ul> -->
 
                                 </li>
-                                <li><a href="course.html">B.P.Ed.</a>
-                                    <ul class="sub-menu">
+                                <li><a href="faculties.html">Faculties</a>
+                                    <!-- <ul class="sub-menu">
                                         <li><a href="courses-details.html">Courses Details</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
 
-                                <li><a href="contact.html">Gallery</a></li>
+                                <li><a href="gallery-2.html">Gallery</a></li>
 
                                 <li><a href="event.html">Events</a>
-                                </li>
-                                <li><a href="shop.html">Alumni</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="single-product.html">Single Product Page</a></li>
-                                    </ul>
-                                </li>
 
                                 </li>
+                               
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
