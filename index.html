@@ -35,6 +35,8 @@
     <!-- Responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 
 
     <script src="js/vendor/jquery-3.6.0.min.js"></script>
@@ -98,18 +100,6 @@
             border-radius: 0% !important;
             width: 110px !important;
             height: 126px !important;
-        }
-
-        .news-container {
-            width: 100%;
-        }
-
-       
-
-        .news-item {
-            flex: 0 0 300px;
-            margin-right: 5px;
-          
         }
 
       
@@ -199,17 +189,6 @@
 
         }
 
-        @media only screen and (max-width: 745px) {
-           .news {
-            display: none;
-           }
-        }
-
-        @media only screen and (min-width: 745px) {
-           .news1 {
-            display: none;
-           }
-        }
 
         .event-area img{
             height: 250px;
@@ -230,6 +209,149 @@
           width: 100%;
           height: 100%;
         }
+
+        #news .card-body, #news1 .content_desc {
+  height: 250px;
+  overflow: hidden;
+}
+
+#news .card {
+  height: 100%;
+}
+
+#news1 .content_box {
+  height: 100%;
+}
+
+        #news .card {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#news .card-header {
+  margin-bottom: 20px;
+}
+
+#news .card-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+}
+
+#news .card-body {
+  overflow: hidden;
+}
+
+#news .widget_links li {
+  margin-bottom: 10px;
+}
+
+#news .widget_links a {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#news .widget_links a:hover {
+  color: #203a72;
+}
+
+@media only screen and (max-width: 745px) {
+    #news1 .content_box {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 50px;
+}
+        }
+
+        #news1 .content_box {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+#news1 .content_title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+}
+
+#news1 .content_meta {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+#news1 .content_meta li {
+  display: inline-block;
+  margin-right: 10px;
+  color: #888888;
+  font-size: 14px;
+}
+
+#news1 .content_meta li i {
+  margin-right: 5px;
+}
+
+#news1 .content_desc p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#news1 .button-default {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #203a72;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#news1 .button-default:hover {
+  background-color: #203a72;
+}
+
+.text_default ul.list_none li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.text_default ul.list_none li:before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #203a72;
+}
+
+.text_default {
+  font-size: 16px;
+}
+
+
+
+
+        
+
+
       </style>
       <!-- Meta Pixel Code -->
 <script>
@@ -324,154 +446,77 @@
                 </div>
             </div>
 
+            <div class="newsMarquee my-5">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+        
+        
+                        <div class="col-xl-6 col-md-6 h-100" id="news">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <h3>News and Events</h3>
+                                </div>
+                                <div class="card-body" >
+                                    <marquee width="100%" direction="up" height="200px" scrollamount="2">
+                                            <div class="text_default">
+                                                <ul class="list_none widget_links links_style2">
+                                                    <li>
+                                                        <a href="application.html">
+                                                            Admissions going on for 2023-2024 for B.PEd. Course
+                                                        </a>
+                                                    </li>
+                                                    <li> <a href="img/Events/yogaDay.jpeg">
+                                                           International Yoga Day at our college, celebrating peace,
+                                                                harmony,
+                                                                and
+                                                                well-being
+                                                                together.
+                                                        </a></li>
+                                                    <li> <a href="galleryAnnual.html">
+        
+                                                         The Annual Athletic Day Meet brought together students, teachers, and parents.
+                                                        </a></li>
+        
+                                                    <li>
+                                                        <a href="galleryCollegeDay.html">
+                                                            College Day Celebration at JCPE
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <!-- <a class="btn btn-default  rounded-0" href="application.html">Apply
+                                                    online</a> -->
+                                            </div>
+                                    </marquee>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="col-xl-6 col-md-6" id="news1">
+                            <div class="content_box event_box box_shadow1 animation" data-animation="fadeInUp"
+                                data-animation-delay="0.02s">
+                                <div class="content_desc bg-white">
+                                    <h4 class="content_title"><a href="yogaGallery.html">Admission 2023-2024</a></h4>
+                                    <ul class="list_none content_meta">
+                                        <!-- <li><i class="ti-user"></i> <span class="text_default"></span></li> -->
+                                        <li><i class="ti-location-pin"></i><span class="text_default">Jenneys College of Physical
+                                                Education,Trichy</span></li>
+                                    </ul>
+                                    <p class="my-3">Admissions for the course B.P.ED. for the Academic year 2023 - 2024 is going on. Click here to Apply</p>
+                                    <a href="application.html" class="button-default">Apply Online</a>
 
-            <!--End of About Area-->
-            <!--Latest News Area Start-->
-            <div class="container news mt-5">
-                <h2 style="font-weight: 500;">Latest News and Circulars</h2>
-                <div class="news-container py-5">
-                    <div class="row">
-            
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                            <div class="news-item">
-                                <div class="single-latest-item">
-                                    <div class="single-latest-image">
-                                        <!-- <a href="blog-details.html"><img src="img/latest/2.jpg" alt=""></a> -->
-                                    </div>
-                                    <div class="single-latest-text">
-                                        <h3><a href="galleryAnnual.html">International Yoga Day</a></h3>
-                                        <div class="single-item-comment-view">
-                                            <span><i class="zmdi zmdi-calendar-check"></i>21 June 2023</span>
-                                        </div>
-                                        <p>Join us for International Yoga Day at our college, celebrating peace, harmony, and well-being together.</p>
-                                        <a href="img/Events/yogaDay.jpeg" class="button-default">Read More</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-            
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                            <div class="news-item">
-                                <div class="single-latest-item">
-                                    <div class="single-latest-image">
-                                        <!-- <a href="blog-details.html"><img src="img/latest/1.jpg" alt=""></a> -->
-                                    </div>
-                                    <div class="single-latest-text">
-                                        <h3><a href="application.html">Admissions 2023-2024</a></h3>
-                                        <div class="single-item-comment-view">
-                                            <span><i class="zmdi zmdi-calendar-check"></i>02 Jun 2023</span>
-                                        </div>
-                                        <p>Admissions for the course B.P.ED. for the Academic year 2023 - 2024 is going on. Click here to Apply</p>
-                                        <a href="application.html" class="button-default">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                            <div class="news-item">
-                                <div class="single-latest-item">
-                                    <div class="single-latest-image">
-                                        <!-- <a href="blog-details.html"><img src="img/latest/2.jpg" alt=""></a> -->
-                                    </div>
-                                    <div class="single-latest-text">
-                                        <h3><a href="galleryAnnual.html">Annual Athletic Meet</a></h3>
-                                        <div class="single-item-comment-view">
-                                            <span><i class="zmdi zmdi-calendar-check"></i>10 Apr 2023</span>
-                                        </div>
-                                        <p>The Annual Athletic Day Meet brought together students, teachers, and parents in a vibrant celebration</p>
-                                        <a href="galleryAnnual.html" class="button-default">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                            <div class="news-item">
-                                <div class="single-latest-item">
-                                    <div class="single-latest-image">
-                                    </div>
-                                    <div class="single-latest-text">
-                                        <h3><a href="galleryAlumni.html">Alumni Meet</a></h3>
-                                        <div class="single-item-comment-view">
-                                            <span><i class="zmdi zmdi-calendar-check"></i>9 Apr 2023</span>
-                                        </div>
-                                        <p>The motto of an association is to promote the relationships between the former students of our college</p>
-                                        <a href="galleryAlumni.html" class="button-default">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+        
+        
                     </div>
                 </div>
             </div>
-            
 
-
-            <div class="container news1 mt-5">
-                
-                <h2 style="font-weight: 500;">Latest News and Circulars</h2>
-                            
-                <div class="row  py-5">
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                        <div class="news-item">
-                            <div class="single-latest-item">
-                                <div class="single-latest-image">
-                                    <!-- <a href="blog-details.html"><img src="img/latest/2.jpg" alt=""></a> -->
-                                </div>
-                                <div class="single-latest-text">
-                                    <h3><a href="galleryAnnual.html">International Yoga Day</a></h3>
-                                    <div class="single-item-comment-view">
-                                        <span><i class="zmdi zmdi-calendar-check"></i>21 June 2023</span>
-                                    </div>
-                                    <p>Join us for International Yoga Day at our college, celebrating peace, harmony, and well-being together.</p>
-                                    <a href="img/Events/yogaDay.jpeg" class="button-default">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="news-item">
-                                    <div class="single-latest-item">
-                                        <div class="single-latest-image">
-                                            <!-- <a href="blog-details.html"><img src="img/latest/1.jpg" alt=""></a> -->
-                                        </div>
-                                        <div class="single-latest-text">
-                                            <h3><a href="application.html">Admissions 2023-2024</a></h3>
-                                            <div class="single-item-comment-view">
-                                                <span><i class="zmdi zmdi-calendar-check"></i>02 jun 2023</span>
-                                               
-                                            </div>
-                                            <p>Admissions for the course B.P.ED. for the Academic year 2023 - 2024 is going on. Click here to Apply</p>
-                                            <a href="application.html" class="button-default">Apply Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                                <div class="news-item">
-                                    <div class="single-latest-item">
-                                        <div class="single-latest-image">
-                                            <!-- <a href="blog-details.html"><img src="img/latest/2.jpg" alt=""></a> -->
-                                        </div>
-                                        <div class="single-latest-text">
-                                            <h3><a href="galleryAnnual.html">Annual Athletic Meet</a></h3>
-                                            <div class="single-item-comment-view">
-                                                <span><i class="zmdi zmdi-calendar-check"></i>10 Apr 2023</span>
-                                              
-                                            </div>
-                                            <p>The Annual Athletic Day Meet brought together students, teachers, and parents in a vibrant celebration </p>
-                                            <a href="galleryAnnual.html" class="button-default">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                           
-                </div>
-
-                        </div>
+            <!--End of About Area-->
+            <!--Latest News Area Start-->
+         
             <!--End of Latest News Area-->
             <!--About Area Start-->
             <div class="about-area mt-95">
