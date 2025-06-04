@@ -63,12 +63,12 @@ try {
         ],
     ],
     'Source' => $senderEmail,
-    'ReplyToAddresses' => [$u_email], // Specify Reply-To header
+    'ReplyToAddresses' => [$email], // Specify Reply-To header
 
 ]);
 
 // Prepare JSON response
-$response = ['message' => 'Email sent successfully!', 'messageId' => $result['MessageId']];
+$response = ['message' => 'Email has been sent successfully!', 'messageId' => $result['MessageId']];
 echo json_encode($response);
 } catch (AwsException $e) {
 // Prepare JSON error response
