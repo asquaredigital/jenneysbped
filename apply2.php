@@ -21,12 +21,7 @@ $sslc_passing = $_POST['sslc_passing'];
 $hsc_obtained = $_POST['hsc_obtained'];
 $hsc_total = $_POST['hsc_total'];
 $hsc_passing = $_POST['hsc_passing'];
-$ug_major = $_POST['ug_major'];
-$ug_obtain = $_POST['ug_obtain'];
-$ug_passing = $_POST['ug_passing'];
-$pg_major = $_POST['pg_major'];
-$pg_obtain = $_POST['pg_obtain'];
-$pg_passing = $_POST['pg_passing'];
+
 $address = $_POST['address'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
@@ -39,7 +34,7 @@ $headers = "From: www.jenneysphysicaleducation.com" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content
-$subject = 'B.P.Ed Application Form the Website from '.$name;
+$subject = 'B.P.E.S Application Form the Website from '.$name;
 $message = 
 "Name: $name\n
 Dob: $dob\n
@@ -54,12 +49,7 @@ SSLC_passing : $sslc_passing \n
 HSC_obtained : $hsc_obtained \n
 HSC_total : $hsc_total \n
 HSC_passing : $hsc_passing \n
-UG_major : $ug_major \n
-UG_obtain : $ug_obtain \n
-UG_passing : $ug_passing \n
-PG_major : $pg_major \n
-PG_obtain : $pg_obtain \n
-PG_passing : $pg_passing \n
+
 Address : $address \n
 Phone : $phone \n
 Email : $email \n
@@ -71,7 +61,7 @@ achievement : $achievement\n
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-//infojenneysbped
+
 if (mail('elavarasan5193@gmail.com', $subject, $message, $headers)) {
     // Email sent successfully
     $response = array('message' => 'Application sent successfully!');
@@ -126,12 +116,7 @@ $sslc_passing = $_POST['sslc_passing'];
 $hsc_obtained = $_POST['hsc_obtained'];
 $hsc_total = $_POST['hsc_total'];
 $hsc_passing = $_POST['hsc_passing'];
-$ug_major = $_POST['ug_major'];
-$ug_obtain = $_POST['ug_obtain'];
-$ug_passing = $_POST['ug_passing'];
-$pg_major = $_POST['pg_major'];
-$pg_obtain = $_POST['pg_obtain'];
-$pg_passing = $_POST['pg_passing'];
+
 $address = $_POST['address'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
@@ -158,12 +143,7 @@ SSLC_passing : $sslc_passing \n
 HSC_obtained : $hsc_obtained \n
 HSC_total : $hsc_total \n
 HSC_passing : $hsc_passing \n
-UG_major : $ug_major \n
-UG_obtain : $ug_obtain \n
-UG_passing : $ug_passing \n
-PG_major : $pg_major \n
-PG_obtain : $pg_obtain \n
-PG_passing : $pg_passing \n
+
 Address : $address \n
 Phone : $phone \n
 Email : $email \n

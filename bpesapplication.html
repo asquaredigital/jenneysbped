@@ -254,10 +254,9 @@
 
                                         <div class="col-lg-6">
                                             <div class="contact-form-style mb-20">
-                                                <label for="">Select Degree*:</label>
+                                                <label for="">Selected Degree*:</label>
                                                 <select name="degree" id="degree" required>
-                                                    <option value="">--Select Degree--</option>
-                                                    <option value="bped">B.P.Ed</option>
+                                                    <option value="bped" selected>B.P.E.S</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -313,74 +312,9 @@
 
 
 
-                                        <div class="col-lg-12 ">
-                                            <div class="contact-form-style mb-20">
-                                                <label for="">Degree:</label>
-                                                <div class="row">
-                                                    <div class="col-lg-6 ">
-                                                        <div class="row">
-                                                            <label for="">
-                                                                <h4>UG:</h4>
-                                                            </label>
-                                                            <div class="col-lg-6">
-                                                                <div class="contact-form-style mb-20">
-                                                                    <input name="ug_major" id="ug_major" placeholder=" Ug Major*"
-                                                                        type="text" required>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <div class="contact-form-style mb-20">
-                                                                    <!-- <label for=""  style="color: #1F3971;"> sdd.</label> -->
-                                                                    <input name="ug_obtain" id="ug_obtain" placeholder="Marks Obtained*"
-                                                                        type="text" required>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                       
 
-                                                    </div>
-                                                    <div class="col-lg-3 clearfix"></div>
-                                                    <div class="col-lg-3">
-                                                        <div class="contact-form-style mt-4">
-                                                            <input name="ug_passing" id="ug_passing" placeholder="Year of Passing*"
-                                                                type="text" required>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-12 ">
-                                            <div class="contact-form-style mb-20 ">
-                                                <div class="row">
-                                                    <div class="col-lg-6 ">
-                                                        <div class="row">
-                                                            <label for="">
-                                                                <h4>PG:</h4>
-                                                            </label>
-                                                            <div class="col-lg-6">
-                                                                <div class="contact-form-style mb-20">
-                                                                    <input name="pg_major" id="pg_major" placeholder=" Major"
-                                                                        type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <div class="contact-form-style mb-20">
-                                                                    <input name="pg_obtain" id="pg_obtain" placeholder="Marks Obtained"
-                                                                        type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 clearfix"></div>
-                                                    <div class="col-lg-3">
-                                                        <div class="contact-form-style mt-4">
-                                                            <input name="pg_passing" id="pg_passing" placeholder="Year of Passing"
-                                                                type="text">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
 
 
                                         <div class="col-md-12">
@@ -493,12 +427,7 @@
 					hsc_obtained: $('#hsc_obtained').val(),
 					hsc_total: $('#hsc_total').val(),
 					hsc_passing: $('#hsc_passing').val(),
-					ug_major: $('#ug_major').val(),
-					ug_obtain: $('#ug_obtain').val(),
-					ug_passing: $('#ug_passing').val(),
-					pg_major: $('#pg_major').val(),
-					pg_obtain: $('#pg_obtain').val(),
-					pg_passing: $('#pg_passing').val(),
+					
 					address: $('#address').val(),
 					phone: $('#phone').val(),
 					email: $('#email').val(),
@@ -508,7 +437,7 @@
                 // Send AJAX request
                 $.ajax({
                     type: 'POST',
-                    url: 'apply.php',
+                    url: 'apply2.php',
                     data: formData,
                     dataType: 'json',
                     encode: true
