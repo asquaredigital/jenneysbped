@@ -52,7 +52,7 @@ $headers = "From: www.jenneysphysicaleducation.com" . "\r\n" .
            "Reply-To: $email" . "\r\n" ;
 
 // Set up email content
-$subject = 'New Application Form the Website from '.$name;
+$subject = 'New B.P.E.S Application Form the Website from '.$name;
 $message = 
 "Name: $name\n
 Dob: $dob\n
