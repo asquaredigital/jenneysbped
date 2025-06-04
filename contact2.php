@@ -34,7 +34,7 @@ $message = $_POST['message'];
 
 // Set up email headers
 $headers = "From: www.jenneysacademy.com" . "\r\n" .
-           "Reply-To: $u_email" . "\r\n" ;
+           "Reply-To: $email" . "\r\n" ;
 
 // Set up email content
 $subject = 'Enquiry Form the Website';
