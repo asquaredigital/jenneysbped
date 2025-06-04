@@ -91,7 +91,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $senderEmail = 'asquaremailer@gmail.com';
-$recipientEmail = 'elavarasan5193@gmail.com';
+$recipientEmail = 'infojenneysbped@gmail.com';
 //$recipientEmail = 'elavarasan5193@gmail.com';
 
 try {
@@ -116,7 +116,7 @@ try {
 ]);
 
 // Prepare JSON response
-$response = ['message' => 'Application details sent successfully!', 'messageId' => $result['MessageId']];
+$response = ['message' => 'Contact details sent successfully!', 'messageId' => $result['MessageId']];
 echo json_encode($response);
 } catch (AwsException $e) {
 // Prepare JSON error response

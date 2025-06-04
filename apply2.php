@@ -81,7 +81,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $senderEmail = 'asquaremailer@gmail.com';
-$recipientEmail = 'elavarasan5193@gmail.com';
+$recipientEmail = 'infojenneysbped@gmail.com';
 //$recipientEmail = 'elavarasan5193@gmail.com';
 
 try {

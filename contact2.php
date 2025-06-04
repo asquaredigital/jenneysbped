@@ -41,8 +41,8 @@ $subject = 'Enquiry Form the Website';
 $message = "Name: $name\nEmail: $email\nPhone Number: $contact\nMessage: $message";
 
 $senderEmail = 'mailer@jenneysacademy.com';
-//$recipientEmail = 'jenneysacademy@gmail.com';
-$recipientEmail = 'elavarasan5193@gmail.com';
+$recipientEmail = 'infojenneysbped@gmail.com';
+//$recipientEmail = 'elavarasan5193@gmail.com';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
