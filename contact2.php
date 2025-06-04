@@ -1,3 +1,4 @@
+
 <?php
 require '../vendor/vendor/autoload.php';
 
@@ -26,22 +27,24 @@ $sesClient = new SesClient([
     ],
 ]);
 // Get form data
-$u_name = $_POST['name'];
-$u_email = $_POST['email'];
-$p_number = $_POST['contact'];
-$msg = $_POST['message'];
+$name = $_POST['name'];
+$email = $_POST['email'];
+$contact = $_POST['contact'];
+$message = $_POST['message'];
 
 // Set up email headers
-$headers = "From: www.jenneysphysicaleducation.com" . "\r\n" .
+$headers = "From: www.jenneysacademy.com" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content
-$subject = 'Enquiry Form Jenneys Physical Education Website';
-$message = "Name: $u_name\nEmail: $u_email\nPhone Number: $p_number\nMessage: $msg";
+$subject = 'Enquiry Form the Website';
+$message = "Name: $name\nEmail: $email\nPhone Number: $contact\nMessage: $message";
+
+$senderEmail = 'mailer@jenneysacademy.com';
+//$recipientEmail = 'jenneysacademy@gmail.com';
+$recipientEmail = 'elavarasan5193@gmail.com';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-$senderEmail = 'asquaremailer@gmail.com';
-$recipientEmail = 'elavarasan5193@gmail.com';
 
 try {
     $result = $sesClient->sendEmail(['Destination' => [
@@ -65,14 +68,11 @@ try {
 ]);
 
 // Prepare JSON response
-$response = ['message' => 'Contact details sent successfully!', 'messageId' => $result['MessageId']];
+$response = ['message' => 'Email sent successfully!', 'messageId' => $result['MessageId']];
 echo json_encode($response);
 } catch (AwsException $e) {
 // Prepare JSON error response
-$response = ['message' => 'Failed to send Contact details, Contact Support.', 'error' => $e->getAwsErrorMessage()];
+$response = ['message' => 'Failed to send email.', 'error' => $e->getAwsErrorMessage()];
 echo json_encode($response);
 }
 ?>
-
-
-

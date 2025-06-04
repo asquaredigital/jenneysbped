@@ -224,8 +224,8 @@
     <script src="js/main.js"></script>
 
     
-    <script>
-        $(document).ready(function() {
+   <script>
+   $(document).ready(function() {
             $('#contact-form').submit(function(event) {
                 event.preventDefault(); // Prevent form submission
         
@@ -248,15 +248,18 @@
                 .done(function(response) {
                     // Display response message
                     $('#response-message').text(response.message);
+                    $("#contact-form").trigger("reset");
+
                 })
                 .fail(function(response) {
                     // Display error message
                     $('#response-message').text('Error occurred while processing the request.');
+                    $("#contact-form").trigger("reset");
+
                 });
             });
         });
-        
-            </script>
+  </script>
 </body>
 
 </html>
