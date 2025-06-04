@@ -106,7 +106,7 @@ try {
 ]);
 
 // Prepare JSON response
-$response = ['message' => 'Contact details sent successfully!', 'messageId' => $result['MessageId']];
+$response = ['message' => 'Application details sent successfully!', 'messageId' => $result['MessageId']];
 echo json_encode($response);
 } catch (AwsException $e) {
 // Prepare JSON error response

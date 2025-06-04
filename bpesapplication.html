@@ -398,7 +398,6 @@
 
     <!-- AJax Mail JS
 		============================================ -->
-    <script src="js/ajax-mail.js"></script>
 
     <!-- plugins JS
 		============================================ -->
@@ -445,10 +444,14 @@
                 .done(function(response) {
                     // Display response message
                     $('#response-message').text(response.message);
+                    $("#contact-form").trigger("reset");
+
                 })
                 .fail(function(response) {
                     // Display error message
                     $('#response-message').text('Error occurred while processing the request.');
+                    $("#contact-form").trigger("reset");
+
                 });
             });
         });
