@@ -108,6 +108,12 @@
         #aca1 img {
             max-width: -webkit-fill-available;
         }
+       :target::before {
+    content: "";
+    display: block;
+    height: 200px; /* Adjust based on your fixed header height */
+    margin-top: -200px;
+}
 
         @media only screen and (max-width: 785px) {
             /* #aca0 img {
@@ -221,15 +227,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="#aca" style="font-size: 15px;"> Admissions</a>
-                                    </td>
-                                    <td>
-                                        <a href="#aca"> <i class="fa fa-angle-right"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="#aca0" style="font-size: 15px;"> Eligibility</a>
+                                        <a href="#aca0" style="font-size: 15px;"> Admissions</a>
                                     </td>
                                     <td>
                                         <a href="#aca0"> <i class="fa fa-angle-right"></i></a>
@@ -237,10 +235,18 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="#aca1" style="font-size: 15px;"> Apply Now</a>
+                                        <a href="#aca1" style="font-size: 15px;"> Eligibility</a>
                                     </td>
                                     <td>
                                         <a href="#aca1"> <i class="fa fa-angle-right"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#aca5" style="font-size: 15px;"> Apply Now</a>
+                                    </td>
+                                    <td>
+                                        <a href="#aca5"> <i class="fa fa-angle-right"></i></a>
                                     </td>
                                 </tr>
                             </table>
@@ -258,6 +264,15 @@
                             <img src="img/about/Course of Study-3.jpg" alt=""> -->
 
                             <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-title-wrapper">
+                                        <div class="section-title text-center">
+                                            <h3>BACHELOR OF PHYSICAL EDUCATION(B.P.Ed)</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="row">
                                 <div class="col-md-12">
                                     <div class="section-title-wrapper">
                                         <div class="section-title text-center">
@@ -1115,9 +1130,7 @@
 
                         </div>
 
-                        <div id="aca2"></div>
-                        <div id="aca3"></div>
-                        <div id="aca4"></div>
+                      
                         <div id="aca5">
                             <!-- <img src="img/about/Course of Study-1.jpg" alt="">
                             <img src="img/about/Course of Study-2.jpg" alt="">
@@ -1138,8 +1151,8 @@
 
                                 
                                 <p>
-                                    To Apply for the B.P.Ed course online <a href="application.html"
-                                        style="color:#2d3e50;">Click Here</a>
+                                    To Apply for the B.P.Ed course online <a href="bpedapplication.html"
+                                        style="color:#2d3e50;font-weight: bold;">Click Here</a>
 
                                 </p>
                             </div>
