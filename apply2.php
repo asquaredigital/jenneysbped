@@ -1,104 +1,120 @@
 <?php
-// Display all errors for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Allow access from other origins if needed
-header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
-
-// Block non-POST access
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo json_encode(['message' => 'Invalid request.']);
-    exit;
-}
-
-// Load AWS SDK and config
-if (!file_exists('../vendor/autoload.php') || !file_exists('../vendor/config.php')) {
-    echo json_encode(['message' => 'Configuration error. Required files missing.']);
-    exit;
-}
-
-require '../vendor/autoload.php';
-$config = require '../vendor/config.php';
+require '../vendor/vendor/autoload.php';
 
 use Aws\Ses\SesClient;
 use Aws\Exception\AwsException;
 
-// Extract AWS credentials
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    // Script accessed directly without form submission
+    $response = array('message' => 'Invalid request.');
+    echo json_encode($response);
+    exit;
+}
+
+$config = require '../vendor/config.php';
+
 $awsKey = $config['aws']['key'];
 $awsSecret = $config['aws']['secret'];
 $awsRegion = $config['aws']['region'];
 
-// Initialize AWS SES client
 $sesClient = new SesClient([
     'version' => 'latest',
-    'region'  => $awsRegion,
+    'region' => $awsRegion,
     'credentials' => [
-        'key'    => $awsKey,
+        'key' => $awsKey,
         'secret' => $awsSecret,
     ],
 ]);
+// Get form data
+// Get form data
+$name = $_POST['name'];
+$dob = $_POST['dob'];
+$f_name = $_POST['f_name'];
+$m_name = $_POST['m_name'];
+$religion = $_POST['religion'];
+$community = $_POST['community'];
+$caste = $_POST['caste'];
+$degree = $_POST['degree'];
+$sslc_total = $_POST['sslc_total'];
+$sslc_passing = $_POST['sslc_passing'];
+$hsc_obtained = $_POST['hsc_obtained'];
+$hsc_total = $_POST['hsc_total'];
+$hsc_passing = $_POST['hsc_passing'];
 
-// Collect form data
-$fields = [
-    'name', 'dob', 'f_name', 'm_name', 'religion', 'community', 'caste', 'degree',
-    'sslc_total', 'sslc_passing', 'hsc_obtained', 'hsc_total', 'hsc_passing',
-    'address', 'phone', 'email', 'achievement'
-];
+$address = $_POST['address'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+$achievement = $_POST['achievement'];
 
-$formData = [];
-foreach ($fields as $field) {
-    $formData[$field] = isset($_POST[$field]) ? trim($_POST[$field]) : '';
-}
 
-// Validate required fields
-if (empty($formData['name']) || empty($formData['email']) || empty($formData['phone'])) {
-    echo json_encode(['message' => 'Name, Email, and Phone are required.']);
-    exit;
-}
+// Set up email headers
+$headers = "From: www.jenneysphysicaleducation.com" . "\r\n" .
+           "Reply-To: $email" . "\r\n" ;
 
-// Compose email
-$subject = 'New Application from ' . $formData['name'];
-$message = "New B.P.E.S Application Received:\n\n";
-foreach ($formData as $key => $value) {
-    $label = ucfirst(str_replace('_', ' ', $key));
-    $message .= "$label: $value\n";
-}
+// Set up email content
+$subject = 'New Application Form the Website from '.$name;
+$message = 
+"Name: $name\n
+Dob: $dob\n
+Father name: $f_name\n
+Mother name: $m_name\n
+Religion : $religion \n
+Community : $community \n
+Caste : $caste \n
+Degree : $degree \n
+SSLC_total : $sslc_total \n
+SSLC_passing : $sslc_passing \n
+HSC_obtained : $hsc_obtained \n
+HSC_total : $hsc_total \n
+HSC_passing : $hsc_passing \n
 
-// Define sender and receiver
-$senderEmail = 'asquaremailer@gmail.com'; // Must be verified in AWS SES
-$recipientEmail = 'elavarasan5193@gmail.com'; // Also must be verified if SES is in sandbox
+Address : $address \n
+Phone : $phone \n
+Email : $email \n
+achievement : $achievement\n
+";
+
+
+
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$senderEmail = 'asquaremailer@gmail.com';
+$recipientEmail = 'elavarasan5193@gmail.com';
+//$recipientEmail = 'elavarasan5193@gmail.com';
 
 try {
-    $result = $sesClient->sendEmail([
-        'Destination' => [
-            'ToAddresses' => [$recipientEmail],
-        ],
-        'Message' => [
-            'Body' => [
-                'Text' => [
-                    'Charset' => 'UTF-8',
-                    'Data' => $message,
-                ],
-            ],
-            'Subject' => [
+    $result = $sesClient->sendEmail(['Destination' => [
+        'ToAddresses' => [$recipientEmail],
+    ],
+    'Message' => [
+        'Body' => [
+            'Text' => [
                 'Charset' => 'UTF-8',
-                'Data' => $subject,
+                'Data' => $message,
             ],
         ],
-        'Source' => $senderEmail,
-        'ReplyToAddresses' => [$formData['email']],
-    ]);
+        'Subject' => [
+            'Charset' => 'UTF-8',
+            'Data' => $subject,
+        ],
+    ],
+    'Source' => $senderEmail,
+    'ReplyToAddresses' => [$email], // Specify Reply-To header
 
-    echo json_encode([
-        'message' => 'Application details sent successfully!',
-        'messageId' => $result['MessageId']
-    ]);
+]);
+
+// Prepare JSON response
+$response = ['message' => 'Application details sent successfully!', 'messageId' => $result['MessageId']];
+echo json_encode($response);
 } catch (AwsException $e) {
-    echo json_encode([
-        'message' => 'Failed to send application details.',
-        'error' => $e->getAwsErrorMessage()
-    ]);
+// Prepare JSON error response
+$response = ['message' => 'Failed to send Contact details, Contact Support.', 'error' => $e->getAwsErrorMessage()];
+echo json_encode($response);
 }
 ?>
+
+
+
+
